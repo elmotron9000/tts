@@ -33,7 +33,6 @@ async function createTempDir(): Promise<string> {
 
   if (!await existsAsync(tempPath)) {
     await mkdirAsync(tempPath);
-    console.log("Successfully made temp dir", tempPath);
   }
 
   return tempPath;
