@@ -1,7 +1,7 @@
-import { getPath, save } from "./files";
-import { getHash } from "./hash";
-import * as tts from "./tts";
-import type { TtsOptions } from "./tts";
+import { getPath, save } from './files';
+import { getHash } from './hash';
+import * as tts from './tts';
+import type { TtsOptions } from './tts';
 
 export async function getAudio(text: string, options: Partial<TtsOptions> = {}): Promise<{ path: string }> {
   const hash = getHash(text);
@@ -10,7 +10,7 @@ export async function getAudio(text: string, options: Partial<TtsOptions> = {}):
   if (cachedAudioPath) {
     return {
       path: cachedAudioPath,
-    }
+    };
   }
 
   const audio = await tts.getAudio(text, options);
@@ -19,8 +19,8 @@ export async function getAudio(text: string, options: Partial<TtsOptions> = {}):
     const path = await save(hash, audio);
     return {
       path,
-    }
+    };
   }
 
-  throw new Error("Unable to get audio")
+  throw new Error('Unable to get audio');
 }
