@@ -1,8 +1,9 @@
 import { getPath, save } from "./files";
 import { getHash } from "./hash";
 import * as tts from "./tts";
+import type { TtsOptions } from "./tts";
 
-export async function getAudio(text: string, options: Partial<tts.TtsOptions> = {}): Promise<{ path: string }> {
+export async function getAudio(text: string, options: Partial<TtsOptions> = {}): Promise<{ path: string }> {
   const hash = getHash(text);
 
   const cachedAudioPath = await getPath(hash);
