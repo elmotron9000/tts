@@ -12,7 +12,7 @@ export type TtsOptions = {
 
 export async function getAudio(
   text: string,
-  { languageCode = 'en-US-Wavenet-B', ssmlGender = 'MALE', audioEncoding = 'MP3' }: Partial<TtsOptions> = {},
+  { languageCode = 'en-US-Wavenet-B', ssmlGender = 'MALE', audioEncoding = 'OGG_OPUS' }: Partial<TtsOptions> = {},
 ): Promise<string | Uint8Array | null | undefined> {
   const [response] = await client.synthesizeSpeech({
     input: {
