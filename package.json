@@ -1,5 +1,5 @@
 {
-  "name": "@elmotron9000/ttl",
+  "name": "@elmotron9000/tts",
   "version": "0.0.1",
   "description": "Transform text into audio",
   "main": "lib/index.js",
