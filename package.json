@@ -1,6 +1,6 @@
 {
   "name": "@elmotron9000/tts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Transform text into audio",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
